@@ -145,59 +145,69 @@
         document.addEventListener('DOMContentLoaded', type);
     </script>
 
-<section id="about" class="py-24 px-6 bg-white font-['Plus_Jakarta_Sans'] overflow-hidden">
+<section id="about" class="py-16 md:py-24 px-6 bg-white font-['Plus_Jakarta_Sans'] overflow-hidden">
     <div class="max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-12 gap-12 md:gap-20 items-start">
-            
-            <div class="md:col-span-4" data-aos="fade-right">
-                <div class="relative group">
-                    <div class="absolute inset-0 bg-black translate-x-4 translate-y-4 -z-10 transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0"></div>
-                    <div class="border border-black bg-white overflow-hidden">
-                        <img src="myphoto.jpeg" alt="Hrutuja" class="w-full h-auto grayscale filter contrast-125 hover:grayscale-0 transition-all duration-700 block">
-                    </div>
-                </div>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-20 items-center">
 
-            <div class="md:col-span-8" data-aos="fade-up">
-                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-black mb-6 italic"> About Me</p>
-                <h2 class="text-4xl md:text-5xl font-[900] text-black tracking-tighter uppercase leading-[0.9] mb-8">
-                    I'm <span class="text-blue-600">Hrutuja</span> , <br> Full Stack Developer
-                </h2>
-
-                <p class="text-black text-lg font-bold leading-relaxed mb-12 max-w-3xl">
-                    Master of Computer Applications (MCA) student with a strong academic background and hands-on experience in software development. Proficient in programming languages such as Java, Python, and C++. Adept at designing and implementing efficient algorithms and data structures. Specialized coursework in database management, web development, and software engineering. Seeking a challenging role where I can apply my knowledge, enhance my skills, and make valuable contributions to the ever-evolving landscape of software development. Open to opportunities that foster professional growth and allow me to positively impact the field of computer applications.
+            <!-- TEXT FIRST (Mobile) -->
+            <div class="md:col-span-8 order-1 md:order-2" data-aos="fade-up">
+                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-black mb-4 italic">
+                    About Me
                 </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 border-t-2 border-black pt-10">
+                <h2 class="text-3xl md:text-5xl font-[900] text-black tracking-tighter uppercase leading-tight mb-6">
+                    I'm <span class="text-blue-600">Hrutuja</span><br>
+                    Full Stack Developer
+                </h2>
+
+                <p class="text-black text-base md:text-lg font-semibold leading-relaxed mb-8 max-w-2xl">
+                    Master of Computer Applications (MCA) student with strong skills in Java, Python, and C++.
+                    Passionate about building efficient, scalable applications and continuously learning new technologies.
+                </p>
+
+                <!-- INFO GRID -->
+                <div class="grid grid-cols-2 gap-6 border-t border-black pt-6 text-sm md:text-base">
                     <div>
-                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-black/50 mb-2 font-bold">Age</p>
-                        <p class="text-lg font-black text-black uppercase">23</p>
+                        <p class="text-[10px] font-bold uppercase text-black/50 mb-1">Age</p>
+                        <p class="font-bold text-black">23</p>
                     </div>
                     <div>
-                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-black/50 mb-2 font-bold">Phone</p>
-                        <p class="text-lg font-black text-black uppercase">+91 7620552602</p>
+                        <p class="text-[10px] font-bold uppercase text-black/50 mb-1">Phone</p>
+                        <p class="font-bold text-black">+91 7620552602</p>
                     </div>
                     <div>
-                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-black/50 mb-2 font-bold">Email</p>
-                        <p class="text-lg font-black text-black lowercase">hrutujadhav1012@gmail.com</p>
+                        <p class="text-[10px] font-bold uppercase text-black/50 mb-1">Email</p>
+                        <p class="font-bold text-black break-all">hrutujadhav1012@gmail.com</p>
                     </div>
                     <div>
-                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-black/50 mb-2 font-bold">Place</p>
-                        <p class="text-lg font-black text-black uppercase">Pune, India - 411041</p>
+                        <p class="text-[10px] font-bold uppercase text-black/50 mb-1">Location</p>
+                        <p class="font-bold text-black">Pune, India</p>
                     </div>
                 </div>
 
-                <div class="mt-12">
-                    <a href="Hrutuja Resume.pdf" download='Hrutuja Resume' class="inline-flex items-center gap-4 group">
-                        <span class="text-sm font-black uppercase tracking-widest border-b-2 border-black pb-1 group-hover:text-blue-600 group-hover:border-blue-600 transition-all">Download Resume</span>
-                        <div class="w-10 h-10 rounded-full border border-black flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                            </svg>
-                        </div>
+                <!-- BUTTON -->
+                <div class="mt-8">
+                    <a href="Hrutuja Resume.pdf" download
+                        class="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition">
+                        Download Resume
                     </a>
                 </div>
             </div>
+
+            <!-- IMAGE -->
+            <div class="md:col-span-4 order-2 md:order-1 flex justify-center" data-aos="zoom-in">
+                <div class="relative w-64 md:w-full max-w-xs">
+                    
+                    <!-- subtle background (only desktop feel) -->
+                    <div class="hidden md:block absolute inset-0 bg-black translate-x-4 translate-y-4 -z-10"></div>
+
+                    <div class="border border-black bg-white overflow-hidden shadow-xl">
+                        <img src="myphoto.jpeg"
+                            class="w-full h-auto object-cover grayscale hover:grayscale-0 transition duration-500">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
