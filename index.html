@@ -60,54 +60,60 @@
 
         </div>
     </nav>
-    <section id="home" class="min-h-screen flex items-center justify-center px-6 bg-white overflow-hidden relative font-['Plus_Jakarta_Sans']">
-    <div class="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center relative z-10">
 
-        <div data-aos="fade-up">
-            <h1 class="leading-[0.8] tracking-tighter uppercase mb-12">
-                <div class="flex items-center gap-4 mb-" data-aos="fade-right">
-                    <span class="text-sm md:text-base font-[900] text-black tracking-[0.4em] uppercase italic">
-                        Hii, I am
-                    </span>
-                    <div class="h-[2px] w-12 bg-black"></div>
-                </div>
 
-                <span class="text-7xl md:text-[115px] block font-[200] text-black tracking-[-0.05em] leading-[0.9] opacity-90">
-                    Hrutuja
-                </span>
-                
-                <span class="text-7xl md:text-[115px] block font-[900] text-black tracking-[-0.05em] leading-[0.9]">
-                    Jadhav
-                </span>
-            </h1>
+    <section id="home" class="flex items-center justify-center px-6 py-16 bg-white overflow-hidden relative font-['Plus_Jakarta_Sans']">
+  <div class="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center relative z-10">
 
-            <div class="mb-10">
-                <p class="text-black text-sm font-bold uppercase tracking-widest mb-2 italic">I am into —</p>
-                <span id="typed-text"
-                    class="text-2xl md:text-3xl font-black text-blue-600 uppercase tracking-tighter border-r-4 border-blue-600 pr-2"></span>
-            </div>
-
-            <a href="#projects" class="group flex items-center gap-6">
-                <span class="text-[11px] font-black uppercase tracking-[0.4em] text-black">My Projects</span>
-                <div class="w-14 h-14 rounded-full border-2 border-black flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </div>
-            </a>
+    <!-- TEXT BLOCK -->
+    <div data-aos="fade-up">
+      <h1 class="leading-tight tracking-tighter uppercase mb-8">
+        <div class="flex items-center gap-4 mb-4" data-aos="fade-right">
+          <span class="text-sm md:text-base font-[900] text-black tracking-[0.4em] uppercase italic">
+            Hii, I am
+          </span>
+          <div class="h-[2px] w-12 bg-black"></div>
         </div>
 
-        <div class="relative group cursor-pointer" data-aos="zoom-in">
-            <div class="absolute -inset-4 bg-black/5 rounded-2xl rotate-6 group-hover:rotate-0 transition-transform duration-700 -z-10"></div>
-            <div class="absolute -inset-4 bg-black/5 rounded-2xl -rotate-3 group-hover:rotate-0 transition-transform duration-700 -z-10"></div>
+        <!-- Responsive Name -->
+        <!-- Responsive Name with swapped font weights -->
+        <span class="block text-[clamp(2rem,8vw,7rem)] md:text-[115px] font-[900] text-black tracking-[-0.05em] leading-snug md:leading-[0.9]">
+        Hrutuja
+        </span>
+        <span class="block text-[clamp(2rem,8vw,7rem)] md:text-[115px] font-[200] text-black tracking-[-0.05em] leading-snug md:leading-[0.9]">
+        Jadhav
+        </span>
+      </h1>
 
-            <div class="relative w-full max-w-sm mx-auto shadow-2xl overflow-hidden border-[15px] border-white bg-white rotate-2 group-hover:rotate-0 transition-all duration-700">
-                <img src="photo1.jpeg"
-                    class="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-110 group-hover:scale-100"
-                    alt="Hrutuja Home">
-            </div>
+      <div class="mb-8">
+        <p class="text-black text-sm font-bold uppercase tracking-widest mb-2 italic">I am into —</p>
+        <span id="typed-text"
+          class="text-xl md:text-3xl font-black text-blue-600 uppercase tracking-tighter border-r-4 border-blue-600 pr-2"></span>
+      </div>
+
+      <a href="#projects" class="group flex items-center gap-6">
+        <span class="text-[11px] font-black uppercase tracking-[0.4em] text-black">My Projects</span>
+        <div class="w-14 h-14 rounded-full border-2 border-black flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
         </div>
+      </a>
     </div>
+
+    <!-- IMAGE BLOCK -->
+    <div class="relative group cursor-pointer" data-aos="zoom-in">
+      <div class="absolute -inset-4 bg-black/5 rounded-2xl rotate-6 group-hover:rotate-0 transition-transform duration-700 -z-10"></div>
+      <div class="absolute -inset-4 bg-black/5 rounded-2xl -rotate-3 group-hover:rotate-0 transition-transform duration-700 -z-10"></div>
+
+      <div class="relative w-full max-w-sm mx-auto shadow-2xl overflow-hidden border-[15px] border-white bg-white rotate-2 group-hover:rotate-0 transition-all duration-700">
+        <img src="photo1.jpeg"
+          class="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-110 group-hover:scale-100"
+          alt="Hrutuja Home">
+      </div>
+    </div>
+
+  </div>
 </section>
     <script>
         const textElement = document.getElementById('typed-text');
@@ -151,18 +157,19 @@
 
             <!-- TEXT FIRST (Mobile) -->
             <div class="md:col-span-8 order-1 md:order-2" data-aos="fade-up">
-                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-black mb-4 italic">
+               
+                <p class="text-[30px] font-black uppercase tracking-[0.1em] text-black mb-4 ">
                     About Me
                 </p>
 
-                <h2 class="text-3xl md:text-5xl font-[900] text-black tracking-tighter uppercase leading-tight mb-6">
+                <h2 class="text-4xl md:text-4xl font-[600] text-black tracking-tighter uppercase leading-tight mb-5">
                     I'm <span class="text-blue-600">Hrutuja</span><br>
-                    Full Stack Developer
+                   <p class="text-3xl md:text-2xl">FullStack  Developer</p>
                 </h2>
 
                 <p class="text-black text-base md:text-lg font-semibold leading-relaxed mb-8 max-w-2xl">
-                    Master of Computer Applications (MCA) student with strong skills in Java, Python, and C++.
-                    Passionate about building efficient, scalable applications and continuously learning new technologies.
+                    Master of Computer Applications (MCA) student with a strong academic background and hands-on experience in software development. Proficient in programming languages such as Java, Python, and C++.Adept at designing and implementing efficient algorithms and data structures. Specialized coursework in database management, web development, and software engineering,Seeking a challenging role where I can apply my knowledge, enhance my skills, and make valuable contributions 
+                    to the ever-evolving landscape of software development. Open to opportunities that foster professional growth and allow me to positively impact the field of computer applications.
                 </p>
 
                 <!-- INFO GRID -->
