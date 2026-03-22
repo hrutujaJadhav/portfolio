@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hrutuja Jadhav | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,800;1,200;1,800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #020617;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-glass {
+            background: rgba(229, 230, 233, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tech-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid #1e293b;
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #2dd4bf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="fixed w-full z-50 nav-glass px-6 py-4 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-tighter">HRUTUJA<span class="text-blue-500">.</span></div>
+        <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+            <a href="#home" class="hover:text-blue-400 transition">Home</a>
+            <a href="#about" class="hover:text-blue-400 transition">About</a>
+            <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+            <a href="#education" class="hover:text-blue-400 transition">My Education</a>
+            <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+
+        </div>
+    </nav>
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 bg-white overflow-hidden relative font-['Plus_Jakarta_Sans']">
+    <div class="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center relative z-10">
+
+        <div data-aos="fade-up">
+            <h1 class="leading-[0.8] tracking-tighter uppercase mb-12">
+                <div class="flex items-center gap-4 mb-" data-aos="fade-right">
+                    <span class="text-sm md:text-base font-[900] text-black tracking-[0.4em] uppercase italic">
+                        Hii, I am
+                    </span>
+                    <div class="h-[2px] w-12 bg-black"></div>
+                </div>
+
+                <span class="text-7xl md:text-[115px] block font-[200] text-black tracking-[-0.05em] leading-[0.9] opacity-90">
+                    Hrutuja
+                </span>
+                
+                <span class="text-7xl md:text-[115px] block font-[900] text-black tracking-[-0.05em] leading-[0.9]">
+                    Jadhav
+                </span>
+            </h1>
+
+            <div class="mb-10">
+                <p class="text-black text-sm font-bold uppercase tracking-widest mb-2 italic">I am into —</p>
+                <span id="typed-text"
+                    class="text-2xl md:text-3xl font-black text-blue-600 uppercase tracking-tighter border-r-4 border-blue-600 pr-2"></span>
+            </div>
+
+            <a href="#projects" class="group flex items-center gap-6">
+                <span class="text-[11px] font-black uppercase tracking-[0.4em] text-black">My Projects</span>
+                <div class="w-14 h-14 rounded-full border-2 border-black flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+        <div class="relative group cursor-pointer" data-aos="zoom-in">
+            <div class="absolute -inset-4 bg-black/5 rounded-2xl rotate-6 group-hover:rotate-0 transition-transform duration-700 -z-10"></div>
+            <div class="absolute -inset-4 bg-black/5 rounded-2xl -rotate-3 group-hover:rotate-0 transition-transform duration-700 -z-10"></div>
+
+            <div class="relative w-full max-w-sm mx-auto shadow-2xl overflow-hidden border-[15px] border-white bg-white rotate-2 group-hover:rotate-0 transition-all duration-700">
+                <img src="photo1.jpeg"
+                    class="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-110 group-hover:scale-100"
+                    alt="Hrutuja Home">
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+        const textElement = document.getElementById('typed-text');
+        const words = ['Web Development', 'Data Science', 'UI/UX Design', 'Full Stack'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentWord = words[wordIndex];
+
+            if (isDeleting) {
+                textElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 20 : 40;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Thambnyasathi vel
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        // Typing chalu kara
+        document.addEventListener('DOMContentLoaded', type);
+    </script>
+
+<section id="about" class="py-24 px-6 bg-white font-['Plus_Jakarta_Sans'] overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 md:gap-20 items-start">
+            
+            <div class="md:col-span-4" data-aos="fade-right">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-black translate-x-4 translate-y-4 -z-10 transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0"></div>
+                    <div class="border border-black bg-white overflow-hidden">
+                        <img src="myphoto.jpeg" alt="Hrutuja" class="w-full h-auto grayscale filter contrast-125 hover:grayscale-0 transition-all duration-700 block">
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-8" data-aos="fade-up">
+                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-black mb-6 italic"> About Me</p>
+                <h2 class="text-4xl md:text-5xl font-[900] text-black tracking-tighter uppercase leading-[0.9] mb-8">
+                    I'm <span class="text-blue-600">Hrutuja</span> , <br> Full Stack Developer
+                </h2>
+
+                <p class="text-black text-lg font-bold leading-relaxed mb-12 max-w-3xl">
+                    Master of Computer Applications (MCA) student with a strong academic background and hands-on experience in software development. Proficient in programming languages such as Java, Python, and C++. Adept at designing and implementing efficient algorithms and data structures. Specialized coursework in database management, web development, and software engineering. Seeking a challenging role where I can apply my knowledge, enhance my skills, and make valuable contributions to the ever-evolving landscape of software development. Open to opportunities that foster professional growth and allow me to positively impact the field of computer applications.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 border-t-2 border-black pt-10">
+                    <div>
+                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-black/50 mb-2 font-bold">Age</p>
+                        <p class="text-lg font-black text-black uppercase">23</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-black/50 mb-2 font-bold">Phone</p>
+                        <p class="text-lg font-black text-black uppercase">+91 7620552602</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-black/50 mb-2 font-bold">Email</p>
+                        <p class="text-lg font-black text-black lowercase">hrutujadhav1012@gmail.com</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-black/50 mb-2 font-bold">Place</p>
+                        <p class="text-lg font-black text-black uppercase">Pune, India - 411041</p>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <a href="Hrutuja Resume.pdf" download='Hrutuja Resume' class="inline-flex items-center gap-4 group">
+                        <span class="text-sm font-black uppercase tracking-widest border-b-2 border-black pb-1 group-hover:text-blue-600 group-hover:border-blue-600 transition-all">Download Resume</span>
+                        <div class="w-10 h-10 rounded-full border border-black flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <section id="skills" class="py-24 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-white">
+                    Tech <span class="text-blue-600">Stack (Skills)</span>
+                </h2>
+            </div>
+
+            <div class="bg-[#0f172a]/20 border border-slate-800/50 rounded-[3rem] p-8 md:p-12">
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-center justify-items-center">
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-html5-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">HTML5</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-css3-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">CSS3</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-jquery-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">jQuery</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-javascript-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">JavaScript</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-react-original colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">React.js</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-pip-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">PIP</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-python-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Python</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-django-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Django</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-mysql-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">MySQL</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-nodejs-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Node.js</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-mongodb-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">MongoDB</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-tailwindcss-original colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Tailwind</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-git-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Git</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-github-original text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">GitHub</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-bootstrap-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Bootstrap</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-vscode-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">VS
+                            Code</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-postman-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Postman</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-express-original text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Express</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-npm-original-wordmark colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">NPM</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-windows8-original colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Windows</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-linux-plain text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Linux</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-figma-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Figma</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-cplusplus-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">C++</span>
+                    </div>
+
+                    <div
+                        class="w-32 h-32 bg-[#0a0a0a] border border-slate-800 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(37,99,235,0.2)] transition-all duration-300 group cursor-pointer">
+                        <i
+                            class="devicon-netlify-plain colored text-4xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                        <span
+                            class="text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-tighter">Netlify</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="education" class="py-24 px-6 bg-white border-t border-slate-50">
+        <div class="max-w-5xl mx-auto">
+
+            <div class="mb-14" data-aos="fade-right">
+                <h2 class="text-[13px] font-bold text-blue-400 uppercase tracking-[0.5em] mb-3">Academic</h2>
+                <h2 class="text-6xl font-black text-slate-800 tracking-tighter uppercase italic">
+                    Education</span>
+                </h2>
+            </div>
+
+            <div class="space-y-8">
+
+                <div class="bg-white border border-slate-100 p-8 md:p-10 shadow-sm transition-all duration-500 hover:shadow-xl hover:border-blue-100 group"
+                    data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="text-[10px] font-bold bg-slate-800 text-white px-3 py-1 uppercase tracking-widest">2023
+                                    — 2025</span>
+                                <span
+                                    class="text-[10px] font-bold text-slate-400 border border-slate-100 bg-slate-50 px-3 py-1 uppercase">Completed</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-blue-500/80 tracking-normal uppercase">
+                                    Masters of Computer Application (MCA)</h3>
+                                <p class="text-slate-600 font-semibold text-lg mt-1">Sinhgad Institute Of Management and
+                                    Computer Application.
+                                    (SIMCA), Pune</p>
+
+                                <p class="text-emerald-500 text-lg font-black uppercase tracking-wider mt-4">
+                                    SPPU | SGPA: 7.4 | 74.67%
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 p-8 md:p-10 shadow-sm transition-all duration-500 hover:shadow-xl hover:border-blue-100 group"
+                    data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="text-[10px] font-bold bg-slate-800 text-white px-3 py-1 uppercase tracking-widest">2020
+                                    — 2023</span>
+                                <span
+                                    class="text-[10px] font-bold text-slate-400 border border-slate-100 bg-slate-50 px-3 py-1 uppercase">Completed</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-blue-500/80 tracking-normal uppercase">
+                                    Bachelor of Computer Science (Bsc.Comp Science)</h3>
+                                <p class="text-slate-600 font-semibold text-lg mt-1">Vidya Pratishtan's Art Science And
+                                    Commerce College, Baramati</p>
+                                <p class="text-emerald-500 text-lg font-black uppercase tracking-wider mt-4">
+                                    SPPU | SGPA: 9.12 | 87.64%
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 p-8 md:p-10 shadow-sm transition-all duration-500 hover:shadow-xl hover:border-blue-100 group"
+                    data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="text-[10px] font-bold bg-slate-800 text-white px-3 py-1 uppercase tracking-widest">2019
+                                    — 2020</span>
+                                <span
+                                    class="text-[10px] font-bold text-slate-400 border border-slate-100 bg-slate-50 px-3 py-1 uppercase">Completed</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-blue-500/80 tracking-normal uppercase">HSC
+                                    (Science)</h3>
+                                <p class="text-slate-600 font-semibold text-lg mt-1">Natepute Education Society Junior
+                                    College Natepute</p>
+                                <p class="text-emerald-500 text-lg font-black uppercase tracking-wider mt-4">Maharashtra
+                                    State Board | 78.67% </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 p-8 md:p-10 shadow-sm transition-all duration-500 hover:shadow-xl hover:border-blue-100 group"
+                    data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="text-[10px] font-bold bg-slate-800 text-white px-3 py-1 uppercase tracking-widest">2017
+                                    - 2018</span>
+                                <span
+                                    class="text-[10px] font-bold text-slate-400 border border-slate-100 bg-slate-50 px-3 py-1 uppercase">Completed</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-blue-500/80 tracking-normal uppercase">SSC
+                                </h3>
+                                <p class="text-slate-600 font-semibold text-lg mt-1">Dr.B.J.Date Prashala Natepute</p>
+                                <p class="text-emerald-500 text-lg font-black uppercase tracking-wider mt-4">Maharashtra
+                                    State Board | 81.80% </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="py-24">
+<div class="max-w-6xl mx-auto px-6">
+  <h2 class="text-3xl font-bold mb-16">
+    Project <span class="text-blue-500">Works</span>
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Card 2 -->
+    <div class="group relative bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+      <div class="h-64 bg-slate-800 overflow-hidden">
+        <img src="portfolio.png"
+          class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
+      </div>
+      <div class="p-8">
+        <h3 class="text-2xl font-bold mb-2">Portfolio Website</h3>
+        <p class="text-slate-400 mb-6">
+          Personal portfolio built with Tailwind and animations.
+        </p>
+        <div class="flex gap-4">
+          <span class="text-[10px] bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full font-bold">HTML</span>
+          <span class="text-[10px] bg-yellow-500/10 text-yellow-400 px-3 py-1 rounded-full font-bold">JS</span>
+          <span class="text-[10px] bg-red-500/10 text-red-400 px-3 py-1 rounded-full font-bold">CSS</span>
+          <span class="text-[10px] bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full font-bold">SQL</span>
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="group relative bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+      <div class="h-64 bg-slate-800 overflow-hidden">
+        <img src="bookstore.png"
+          class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
+      </div>
+      <div class="p-8">
+        <h3 class="text-2xl font-bold mb-2">Online BookStore Management Website</h3>
+        <p class="text-slate-400 mb-6">
+
+        </p>
+        <div class="flex gap-4">
+          <span class="text-[10px] bg-red-500/10 text-red-400 px-3 py-1 rounded-full font-bold">Django</span>
+          <span class="text-[10px] bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full font-bold">Python</span>
+          <span class="text-[10px] bg-red-500/10 text-red-400 px-3 py-1 rounded-full font-bold">HTML</span>
+          <span class="text-[10px] bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full font-bold">SQL</span>
+        
+        </div>
+      </div>
+    </div>
+    
+    <!-- Card 1 -->
+    <div class="group relative bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden" data-aos="fade-up">
+      <div class="h-64 bg-slate-800 overflow-hidden">
+        <img src="Dental.png"
+          class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
+      </div>
+      <div class="p-8">
+        <h3 class="text-2xl font-bold mb-2">Dental Clinic Management System</h3>
+        <p class="text-slate-400 mb-6">
+          A full-stack marketplace built with React and Stripe integration.
+        </p>
+        <div class="flex gap-4">
+          <span class="text-[10px] bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full font-bold">REACT</span>
+          <span class="text-[10px] bg-green-500/10 text-green-400 px-3 py-1 rounded-full font-bold">NODE</span>
+         <span class="text-[10px] bg-red-500/10 text-red-400 px-3 py-1 rounded-full font-bold">Express</span>
+          <span class="text-[10px] bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full font-bold">SQL</span>
+        
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<section id="contact" class="py-24 bg-black text-white">
+  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+
+    <!-- LEFT SIDE (VERY SIMPLE) -->
+        <div>
+      <h2 class="text-3xl font-bold mb-8">
+        Contact Me
+      </h2>
+
+      <p class="mb-4">
+        <a href="https://github.com/hrutujaJadhav" target="_blank" 
+           class="hover:text-blue-400 transition">
+          GitHub
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.linkedin.com/in/hrutuja-jadhav-8b378b22a/" target="_blank" 
+           class="hover:text-blue-400 transition">
+          LinkedIn
+        </a>
+      </p>
+    </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <form action="https://formspree.io/f/yourformid" method="POST" class="space-y-6">
+      
+      <input type="text" name="name" placeholder="Your Name"
+        class="w-full p-4 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-blue-500">
+
+      <input type="email" name="email" placeholder="Your Email"
+        class="w-full p-4 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-blue-500">
+
+      <textarea name="message" rows="5" placeholder="Your Message"
+        class="w-full p-4 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:border-blue-500"></textarea>
+
+      <button type="submit"
+        class="bg-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition w-fit">
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+    <footer class="py-10 text-center border-t border-slate-900 text-slate-500 text-sm">
+        &copy; 2024 Hrutuja Jadhav. All rights reserved.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+
+</html>
